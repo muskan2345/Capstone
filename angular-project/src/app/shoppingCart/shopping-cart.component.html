@@ -1,0 +1,31 @@
+<h1>Shopping Cart</h1>
+
+<table class="table table-dark">
+
+    <thead>
+
+        <th>Name</th>
+
+        <th>Price/Qty</th>
+
+    </thead>
+
+    <tbody  *ngFor="let pro of productList">
+
+        <tr><td>{{pro.product.name | uppercase}}</td>
+
+        <td>{{pro.product.price}}</td>
+
+        <td><button (click)="add(pro.product)">+</button> {{pro.quantity}} <button (click)="minus(pro.product)">-</button></td>
+        <!-- <td>{{pro.quantity * pro.prices}}</td> -->
+          <!-- <td>{{pro.product.price * pro.quantity}}</td> -->
+          
+
+    </tr>
+
+
+
+    </tbody>
+
+</table>
+

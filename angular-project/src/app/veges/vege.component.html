@@ -1,0 +1,59 @@
+
+
+<html>
+
+<head></head>
+<body>
+
+    <div class="card">
+        <div class="card-header">
+
+
+        </div>
+        <div class="card-body">
+            <table class="table table-light">
+                <thead>
+                  <tr>
+
+                    <th scope="col">Name</th>
+                    <th scope="col">code</th>
+                    <th scope="col"></th>
+                  <!-- </th><button class="btn btn-primary" (click)="showImageVisibility()"></button> -->
+                    <!-- <th scope="col"></th> -->
+
+
+
+                    <!-- <th scope="col"></th> -->
+                  </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products$ |async">
+
+                        <!-- <td>{{product.id}}</td> -->
+                        <!-- <input #inputEl type="checkbox" [name]="label" [(ngModel)]="isChecked" (change)="onChange(inputEl.checked)"
+                        *ngIf="isChecked" checked> -->
+                         <td (click)="productSelected(product)">{{product.name | uppercase}}</td>
+                        <td *ngIf="showImage">{{product.code }}</td>
+                        <td><img  *ngIf="showImage"src="{{product.image}}" width="50px" height="50px"/></td>
+
+                        <td> <button class="btn btn-primary" (click)="productSelected(product)"><span class="material-icons"> edit</span></button></td>
+
+                        <td><button class="btn btn-danger"(click)="deleteProduct(product)">DELETE</button></td>
+
+
+                      </tr>
+
+                </tbody>
+              </table>
+              <br>
+              <input type="checkbox"  id="isCheckBox" (change)="showImageVisibility()"/> Display Code
+              <br>
+               <button class="btn btn-primary" (click)="newProduct()">Add </button>
+        </div>
+
+      </div>
+
+      <router-outlet></router-outlet>
+</body>
+</html>
+
