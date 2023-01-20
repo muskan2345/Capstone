@@ -12,9 +12,12 @@
                 <thead>
                   <tr>
 
-                    <th scope="col"></th>
-                    <th scope="col"></th>
-                    <th scope="col"></th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Code</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Image</th>
+                    <th scope="col">    </th>
+                    <th scope="col">    </th>
                   <!-- </th><button class="btn btn-primary" (click)="showImageVisibility()"></button> -->
                     <!-- <th scope="col"></th> -->
 
@@ -31,9 +34,9 @@
                         *ngIf="isChecked" checked> -->
                         <!-- <td (click)="productSelected(product)">{{product.name | uppercase}}</td> -->
                          <td (click)="productSelected(product)">{{product.name | uppercase}}</td>
-                        <td *ngIf="showImage">{{product.code }}</td>
+                        <td >{{product.code }}</td>
                         <td>{{product.price}}</td>
-                        <td><img  *ngIf="showImage"src="{{product.image}}" width="75px" height="50px"/></td>
+                        <td><img  src="{{product.image}}" width="75px" height="50px"/></td>
 
                      <td> <button class="btn btn-primary" (click)="productSelected(product)"><span class="material-icons"> edit</span></button></td>
 
@@ -45,8 +48,8 @@
                 </tbody>
               </table>
               <br>
-              <input type="checkbox"  id="isCheckBox" (change)="showImageVisibility()"/> Display Code
-              
+              <!-- <input type="checkbox"  id="isCheckBox" (change)="showImageVisibility()"/> Display Code -->
+
                <button class="btn btn-primary" (click)="newProduct()">Add </button>
         </div>
 

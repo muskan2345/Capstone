@@ -1,6 +1,7 @@
 import { Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 
 import { ProductComponent } from '../Product/product.component';
+import { IProduct } from '../veges/vege';
 
 
 
@@ -17,12 +18,14 @@ import { ProductComponent } from '../Product/product.component';
 
 export class ShoppingCartComponent implements OnInit,OnChanges{
 
+  total:number=0;
   ngOnInit(): void {
 
 
 
   }
 
+  @Input() prot:Product[]=[];
 
 
 
@@ -37,7 +40,7 @@ export class ShoppingCartComponent implements OnInit,OnChanges{
 
     image:"",
 
-     qty:1,
+     qty:0,
    //  total:1
 
 
@@ -156,20 +159,22 @@ minus(pro:Product){
 
     }
 
-
-
-
-
-
-
-
-
-
   }
 
 
+  // getTotalPrice(): number {
 
+  //   let grandTotal = 0;
 
+  //   this.productList.map((a: any) => {
+
+  //     grandTotal += a.price * a.qty;
+
+  //   })
+
+  //   return grandTotal;
+
+  // }
 
 
 

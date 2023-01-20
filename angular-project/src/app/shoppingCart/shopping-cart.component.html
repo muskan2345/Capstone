@@ -17,15 +17,29 @@
         <td>{{pro.product.price}}</td>
 
         <td><button (click)="add(pro.product)">+</button> {{pro.quantity}} <button (click)="minus(pro.product)">-</button></td>
-        <!-- <td>{{pro.quantity * pro.prices}}</td> -->
-          <!-- <td>{{pro.product.price * pro.quantity}}</td> -->
-          
+
+
+
+        <!-- <td>{{pro.product.total}} </td> -->
+        <!-- <td><strong>Grand Total : ${{grandTotal}}</strong></td> -->
+
 
     </tr>
 
 
 
+
     </tbody>
+
 
 </table>
 
+
+<div>
+<button class="btn btn-outline-dark"><a routerLink="/payment" > Checkout </a></button>
+</div>
+
+<div>
+<button class="btn btn-outline-dark"><a routerLink="veges">Continue shopping</a></button>
+
+</div>

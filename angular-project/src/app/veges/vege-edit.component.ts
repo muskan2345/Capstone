@@ -46,7 +46,7 @@ export class VegeEditComponent {
     this.product$.subscribe(resp=> this.product=resp);
 
   }
-
+  // for reactive form we need to get 
   get id(){
     return this.addProduct.get("id");
   }

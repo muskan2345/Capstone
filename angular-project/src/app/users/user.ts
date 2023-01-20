@@ -1,6 +1,7 @@
 export interface User{
 
-  username: string,
-  password: string,
-  isAdmin: boolean
+   //id:number;
+  username:string;
+  password:string;
+  isAdmin:boolean;
 }

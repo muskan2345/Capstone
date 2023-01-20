@@ -29,6 +29,7 @@
     "bootstrap-icons": "^1.10.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
+    "xml2js": "^0.4.23",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
@@ -39,6 +40,7 @@
     "@nativescript/schematics": "^11.2.0",
     "@schematics/angular": "^15.1.1",
     "@types/jasmine": "~4.3.0",
+    "@types/xml2js": "^0.4.11",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",

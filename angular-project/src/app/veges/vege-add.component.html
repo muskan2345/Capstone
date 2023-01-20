@@ -10,7 +10,7 @@
           <label for="name">Product Name:</label>
           <input type="text" formControlName="name"
           placeholder="Product name"
-          (blur)="blur()"
+
           name="name" class="form-control" id="name">
         </div>
 
@@ -18,7 +18,7 @@
           <label for="price">Code:</label>
           <input type="text" formControlName="code"
            placeholder="code"
-           (blur)="blur()" name="code" class="form-control" id="code">
+           name="code" class="form-control" id="code">
         </div>
 
 
@@ -27,8 +27,22 @@
 
         <div class="form-group">
           <label for="image">Image:</label>
-          <input (blur)="blur()" type="text" formControlName="image"
+          <input  type="text" formControlName="image"
           placeholder="Product image" name="image" class="form-control" id="image">
+        </div>
+
+
+        <div class="form-group">
+          <label for="qty">Quantity:</label>
+          <input  type="number" formControlName="qty"
+          placeholder="Product qty" name="qty" class="form-control" id="qty">
+        </div>
+
+
+        <div class="form-group">
+          <label for="price">Price:</label>
+          <input  type="number" formControlName="price"
+          placeholder="Product Price" name="price" class="form-control" id="price">
         </div>
 
 

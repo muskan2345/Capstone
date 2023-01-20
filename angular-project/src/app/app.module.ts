@@ -20,9 +20,10 @@ import { EffectsModule } from '@ngrx/effects';
 import { HttpClientModule } from '@angular/common/http';
 import { VegeEditComponent } from './veges/vege-edit.component';
 import { HomePageComponent } from './home-page/home-page.component';
-import { CartComponent } from './cart/cart.component';
+
 import { ProductComponent } from './Product/product.component';
 import { ShoppingCartComponent } from './shoppingCart/shopping-cart.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -36,9 +37,9 @@ import { ShoppingCartComponent } from './shoppingCart/shopping-cart.component';
     VegeAddComponent,
     VegeEditComponent,
     HomePageComponent,
-    CartComponent,
+  
     ProductComponent,
-    ShoppingCartComponent
+    ShoppingCartComponent,PaymentComponent
 
   ],
   imports: [
@@ -53,6 +54,7 @@ import { ShoppingCartComponent } from './shoppingCart/shopping-cart.component';
     EffectsModule.forRoot(),
     HttpClientInMemoryWebApiModule.forRoot(InMemoryEventDbService),
     HttpClientModule,
+    BrowserModule
 
   ],
   providers: [],

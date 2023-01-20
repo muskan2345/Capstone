@@ -31,7 +31,7 @@ export class InMemoryEventDbService implements InMemoryDbService{
             "id": 100,
             "name": "Apple",
 
-            "image": "../../assets/fruit.jpg",
+            "image": "../../assets/apple.jpg",
             "code":"EWrewrwe",
             "qty":3,
             "price":40,
@@ -44,7 +44,7 @@ export class InMemoryEventDbService implements InMemoryDbService{
             "id": 101,
             "name": "banana",
 
-            "image": "../../assets/fruit2.jpg",
+            "image": "../../assets/banana.jpg",
             "code":"EWrewrwe",
             "qty":3,
             "price":90
@@ -56,7 +56,7 @@ export class InMemoryEventDbService implements InMemoryDbService{
             "id": 102,
             "name": "Tomato",
 
-            "image": "../../assets/fruit3.jpg",
+            "image": "../../assets/tomato.jpg",
             "code":"EWrewrwe",
             "qty":3,
             "price":34
@@ -69,7 +69,7 @@ export class InMemoryEventDbService implements InMemoryDbService{
             "name": "potatoe",
 
             "code":"EWrewrwe",
-            "image": "../../assets/images.jpg",
+            "image": "../../assets/potato.jpg",
             "qty":3,
             "price":34
 
@@ -81,7 +81,7 @@ export class InMemoryEventDbService implements InMemoryDbService{
             "id": 104,
             "name": "capsicum",
 
-            "image": "../../assets/vege1.jpg",
+            "image": "../../assets/capsicum.jpg",
             "code":"EWrewrwe",
             "qty":3,
             "price":89
@@ -93,7 +93,7 @@ export class InMemoryEventDbService implements InMemoryDbService{
             "id": 105,
             "name": "orange",
 
-            "image": "../../assets/vege2.jpg",
+            "image": "../../assets/orange.jpg",
             "code":"EWrewrwe",
             "qty":3,
             "price":56

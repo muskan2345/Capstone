@@ -23,7 +23,7 @@ export class ProductService{
 
 
 
-     private url:string='api/products';
+     url:string='api/products';
 
      products:Product[]=[];
 

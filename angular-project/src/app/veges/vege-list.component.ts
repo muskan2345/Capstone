@@ -25,12 +25,12 @@ selectedProduct!:IProduct | null;
 filterValue!:string;
 href:string='';
 
-//******************** declared below are observables for which we will use async pipe in template , no sub/unsub*/
+//declared below are observables for which we will use async pipe in template , no sub/unsub*/
 products$!:Observable<IProduct[]>;
 selectedProduct$!:Observable<any>;
 errorMessage$!: Observable<string>;
 
-//*************** */
+
 dataReceived=this.productService.getProducts();
 obsProducts$!:Observable<IProduct[]>;
 @Output() OnProductSelection:EventEmitter<IProduct>=new EventEmitter<IProduct>();
@@ -42,23 +42,19 @@ obsProducts$!:Observable<IProduct[]>;
   ngOnInit(): void {
     this.href=this.router.url;
 
-   // Do NOT subscribe here because it uses an async pipe
-    // This gets the initial values until the load is complete.
+  // these  are the  observable
     this.products$ = this.store.select(getProducts);
-   // this.products$.subscribe(resp=>this.filteredProducts=resp);
-    // Do NOT subscribe here because it uses an async pipe
+
+    // Here we will be using async pipe so need not to subscribe
     this.errorMessage$ = this.store.select(getError);
 
     this.store.dispatch(ProductActions.loadProducts());
 
-    // Do NOT subscribe here because it uses an async pipe
+   
     this.selectedProduct$ = this.store.select(getCurrentProduct);
 
      }
 
-     ngOnDestroy(): void {
-       //this.sub.unsubscribe();
-  }
 
 
   showImageVisibility(){
@@ -88,15 +84,14 @@ obsProducts$!:Observable<IProduct[]>;
 newProduct():void{
    console.log('in new product');
 
-  // this.productService.changeSelectedProduct(this.productService.newProduct());
-  // console.log('back to newProduct from service ');
+
   this.store.dispatch(ProductActions.initializeCurrentProduct());
    this.router.navigate([this.href,'addVege']);
 }
 
 
  productSelected(product:IProduct):void{
-  //this.productService.changeSelectedProduct(product);
+
 this.store.dispatch(ProductActions.setCurrentProduct({currentProductId:product.id}));
 this.router.navigate([this.href,'editVege']);
 }

@@ -37,16 +37,12 @@ export class VegeAddComponent {
         minLength:'Product name must have 3 characters',
         maxLength:'Product name must have less than  equal to 10 chars'
       },
-      category:{
-        required:'Category is required'
-      },
+
       price:{
         required:'Price is required'
       },image:{
         required:'Image is required'
-      },rating:{
-        required:'Rating is required'
-      },
+      }
 
 
       };
@@ -94,7 +90,7 @@ console.log('value in form changes')
 
     //when the product is selected from the product list , it should be displayed on the form
 
-    //this.sub=this.productService.selectedProductChanges$.subscribe(selProd=>this.displayProduct(selProd));
+    
 
 
     this.addProduct.valueChanges.
@@ -122,13 +118,7 @@ console.log('value in form changes')
       }
 
 
-  /* onSubmit() {
-    this.productService.createProduct(this.addProduct.value)
-      .subscribe( data => {console.log(data);
-        this.router.navigate(['products']);
-      });
-  }
- */
+
 //method which renders the selected product on the form
   displayProduct(productParam:IProduct |null |undefined):void{
    console.log(this.product,'in display product of product add component ');
@@ -168,29 +158,19 @@ console.log('value in form changes')
 
     if(this.addProduct.valid){
       if(this.addProduct.dirty){
-        //copy over all of the orginal product properties
-        //we arecopying data from teh addform
-        //{...} it ensures that values are not lost ids are retained
+
         const product={...originalProduct,...this.addProduct.value};
 
       if(product.id==0){
 
         this.store.dispatch(ProductActions.createProduct({product}));
-        // this.productService.createProduct(product).subscribe(
-        //   (resp)=>{
-        //     this.productService.changeSelectedProduct(resp);
-        //     console.log(resp);},
 
-        //   (err)=>this.errorMessage=err
-        // );
 
      }
      else{this.store.dispatch(ProductActions.updateProduct({ product }));
 
 
-      // this.productService.updateProduct(product).subscribe(
-      //  resp=>this.productService.changeSelectedProduct(resp),
-      //  err=>this.errorMessage=err      );
+
 
      }
       }
@@ -199,11 +179,8 @@ console.log('value in form changes')
     }
 
   }
-//validating on blur ,if user tabs out through the form fields
-  blur():void{
-  this.displayMessage=this.genericValidator.processMessages(this.addProduct);
 
-  }
+
 
   deleteProduct(prod:IProduct):void{
     if(prod && prod.id){
@@ -213,16 +190,13 @@ console.log('value in form changes')
 
         this.store.dispatch(ProductActions.deleteProduct({ productId: prod.id }));
 
-        // this.productService.deleteProduct(prod.id).subscribe(
-        //   resp=>this.productService.changeSelectedProduct(null),
-        //   err=>this.errorMessage=err
-        // );
+
       }
       else{
-// No need to delete, it was never saved
+
 this.store.dispatch(ProductActions.clearCurrentProduct());
 
-     // this.productService.changeSelectedProduct(null)
+
       }
     }
 

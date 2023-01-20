@@ -28,7 +28,7 @@
 
 
 
-        <input type="text"  (keyup)="filter()" [(ngModel)]="inp" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1"> 
+        <input type="text"  (keyup)="filter()" [(ngModel)]="inp" class="form-control" placeholder="Search" aria-label="Username" aria-describedby="basic-addon1">
 
       </div>
 
@@ -36,7 +36,7 @@
 
         <thead>
 
-            <th>ID</th>
+            <!-- <th>ID</th> -->
 
              <th>Name</th>
 
@@ -44,9 +44,9 @@
 
             <th>Image</th>
 
-             <th>Rating</th>
+             <!-- <th>Rating</th> -->
 
-            <th>Category</th>
+            <!-- <th>Category</th> -->
 
 
 
@@ -58,7 +58,7 @@
 
                 <td (click)="productSelected(product)">{{product.name | uppercase}}</td>
 
-                <td>{{product.name }}</td>
+                <!-- <td>{{product.name }}</td> -->
 
                  <td>{{product.price}}</td>
 
